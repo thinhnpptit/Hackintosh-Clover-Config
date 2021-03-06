@@ -18,23 +18,23 @@
 			<false/>
 			<key>#MaxMultiplier</key>
 			<integer>12</integer>
-			<key>#MinMultiplier</key>
-			<integer>8</integer>
-			<key>#EnableC6</key>
-			<true/>
-			<key>#UnderVoltStep</key>
-			<integer>1</integer>
 			<key>#C3Latency</key>
 			<string>0x03E7</string>
+			<key>#MinMultiplier</key>
+			<integer>8</integer>
+			<key>#UnderVoltStep</key>
+			<integer>1</integer>
+			<key>#EnableC6</key>
+			<true/>
 			<key>#DropOem</key>
 			<true/>
 			<key>#PLimitDict</key>
 			<integer>1</integer>
-			<key>#NoDynamicExtract</key>
+			<key>#UseSystemIO</key>
 			<false/>
 			<key>#NoOemTableId</key>
 			<false/>
-			<key>#UseSystemIO</key>
+			<key>#NoDynamicExtract</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -80,33 +80,13 @@
 				</dict>
 				<dict>
 					<key>Find</key>
-					<data>WEhDMQ==</data>
+					<data>oAqTU1RBUwE=</data>
 					<key>Replace</key>
-					<data>U0hDSQ==</data>
+					<data>oAqRCv8L//8=</data>
 					<key>Disabled</key>
 					<false/>
 					<key>Comment</key>
-					<string>change XHC1 to SHCI</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-				</dict>
-				<dict>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-					<key>Disabled</key>
-					<false/>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
+					<string>Fix RTC _STA bug</string>
 				</dict>
 			</array>
 			<key>Fixes</key>
@@ -130,7 +110,7 @@
 				<key>AddIMEI</key>
 				<false/>
 				<key>FixHPET</key>
-				<true/>
+				<false/>
 				<key>AddMCHC</key>
 				<false/>
 				<key>FixAirport</key>
@@ -138,7 +118,7 @@
 				<key>FixDarwin7</key>
 				<false/>
 				<key>FixRTC</key>
-				<true/>
+				<false/>
 				<key>AddPNLF</key>
 				<false/>
 				<key>FixLAN</key>
@@ -156,7 +136,7 @@
 				<key>FixSATA</key>
 				<false/>
 				<key>FixTMR</key>
-				<true/>
+				<false/>
 				<key>FixMutex</key>
 				<false/>
 				<key>FixUSB</key>
@@ -170,7 +150,7 @@
 				<key>FixADP1</key>
 				<false/>
 				<key>FixIPIC</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>#Rtc8Allowed</key>
 			<false/>
@@ -293,14 +273,14 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>Disabled</key>
-					<false/>
+					<key>Title</key>
+					<string>Mageia Linux</string>
 					<key>Type</key>
 					<string>Linux</string>
 					<key>Hidden</key>
 					<false/>
-					<key>Title</key>
-					<string>Mageia Linux</string>
+					<key>Disabled</key>
+					<false/>
 					<key>Path</key>
 					<string>\EFI\MAGEIA\GRUBX64.efi</string>
 					<key>Image</key>
@@ -357,16 +337,16 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Title</key>
-					<string>MyLegacyEntry</string>
+					<key>Hotkey</key>
+					<string>L</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
 					<false/>
-					<key>Hotkey</key>
-					<string>L</string>
 					<key>Disabled</key>
 					<true/>
+					<key>Title</key>
+					<string>MyLegacyEntry</string>
 					<key>Volume</key>
 					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
@@ -580,14 +560,16 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAwAQ==</data>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
 				<key>device-id</key>
-				<data>EgQAAA==</data>
-				<key>framebuffer-cursormem</key>
+				<data>mz4AAA==</data>
+				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>BgAmCg==</data>
+				<data>AACbPg==</data>
 			</dict>
 		</dict>
 		<key>#FakeID</key>
@@ -828,7 +810,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosVersion</key>
-		<string>MBP111.88Z.F000.B00.2012171739</string>
+		<string>MBP161.88Z.F000.B00.2101062056</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>BoardManufacturer</key>
@@ -846,9 +828,9 @@
 		<key>#NoRomInfo</key>
 		<true/>
 		<key>BoardVersion</key>
-		<string>MacBookPro11,1</string>
+		<string>MacBookPro16,1</string>
 		<key>ProductName</key>
-		<string>MacBookPro11,1</string>
+		<string>MacBookPro16,2</string>
 		<key>#EfiVersion</key>
 		<string>288.0.0.0.0</string>
 		<key>#BoardVersion</key>
@@ -860,11 +842,11 @@
 		<key>#Trust</key>
 		<true/>
 		<key>BiosReleaseDate</key>
-		<string>12/17/2020</string>
+		<string>01/06/2021</string>
 		<key>#BoardType</key>
 		<integer>10</integer>
 		<key>FirmwareFeatures</key>
-		<string>0xEB0FF577</string>
+		<string>0xFDAFF066</string>
 		<key>#SerialNumber</key>
 		<string>C02JBSAMDNCW</string>
 		<key>#MemoryRank</key>
@@ -934,13 +916,13 @@
 		<key>#ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0xA</string>
+		<string>0x9</string>
 		<key>#Version</key>
 		<string>1.0</string>
 		<key>#FirmwareFeaturesMask</key>
 		<string>0xFFFFFFFF</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF7F</string>
+		<string>0xFFFFFF7F</string>
 		<key>#Slots</key>
 		<array>
 			<dict>
@@ -977,11 +959,11 @@
 		<key>#PlatformFeature</key>
 		<string>0x00</string>
 		<key>EfiVersion</key>
-		<string>430.0.0.0.0</string>
+		<string>1554.80.3.0.0</string>
 		<key>Board-ID</key>
-		<string>Mac-189A3D4F975D5FFC</string>
+		<string>Mac-E1008331FDC96864</string>
 		<key>PlatformFeature</key>
-		<string>0x2</string>
+		<string>0x32</string>
 		<key>#BiosReleaseDate</key>
 		<string>05/03/10</string>
 	</dict>
@@ -1003,9 +985,9 @@
 	<key>Quirks</key>
 	<dict>
 		<key>RebuildAppleMemoryMap</key>
-		<false/>
+		<true/>
 		<key>SyncRuntimePermissions</key>
-		<false/>
+		<true/>
 		<key>DisableSingleUser</key>
 		<false/>
 		<key>AvoidRuntimeDefrag</key>
@@ -1021,7 +1003,7 @@
 		<key>DiscardHibernateMap</key>
 		<false/>
 		<key>DevirtualiseMmio</key>
-		<false/>
+		<true/>
 		<key>KernelCache</key>
 		<string>Auto</string>
 		<key>EnableSafeModeSlide</key>
@@ -1041,7 +1023,7 @@
 		<key>ProvideConsoleGopEnable</key>
 		<true/>
 		<key>ProtectUefiServices</key>
-		<false/>
+		<true/>
 		<key>ProtectMemoryRegions</key>
 		<false/>
 		<key>DummyPowerManagement</key>
@@ -1053,7 +1035,7 @@
 		<key>ProvideMaxSlide</key>
 		<integer>0</integer>
 		<key>EnableWriteUnprotector</key>
-		<true/>
+		<false/>
 		<key>ThirdPartyDrives</key>
 		<false/>
 		<key>SetupVirtualMap</key>

@@ -32,9 +32,9 @@
 			<integer>1</integer>
 			<key>#UseSystemIO</key>
 			<false/>
-			<key>#NoDynamicExtract</key>
-			<false/>
 			<key>#NoOemTableId</key>
+			<false/>
+			<key>#NoDynamicExtract</key>
 			<false/>
 			<key>Generate</key>
 			<dict>
@@ -273,16 +273,16 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>Path</key>
-					<string>\EFI\MAGEIA\GRUBX64.efi</string>
+					<key>Title</key>
+					<string>Mageia Linux</string>
 					<key>Type</key>
 					<string>Linux</string>
 					<key>Hidden</key>
 					<false/>
 					<key>Disabled</key>
 					<false/>
-					<key>Title</key>
-					<string>Mageia Linux</string>
+					<key>Path</key>
+					<string>\EFI\MAGEIA\GRUBX64.efi</string>
 					<key>Image</key>
 					<string>os_mageia</string>
 				</dict>
@@ -337,16 +337,16 @@
 			<key>Legacy</key>
 			<array>
 				<dict>
-					<key>Disabled</key>
-					<true/>
+					<key>Hotkey</key>
+					<string>L</string>
 					<key>Type</key>
 					<string>Windows</string>
 					<key>Hidden</key>
 					<false/>
+					<key>Disabled</key>
+					<true/>
 					<key>Title</key>
 					<string>MyLegacyEntry</string>
-					<key>Hotkey</key>
-					<string>L</string>
 					<key>Volume</key>
 					<string>89433CD3-21F2-4D3C-95FC-722C48066D3A</string>
 				</dict>
@@ -567,7 +567,7 @@
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>AACbPg==</data>
+				<data>CQClPg==</data>
 			</dict>
 		</dict>
 		<key>#FakeID</key>
@@ -634,12 +634,12 @@
 			<string>0x9221</string>
 			<key>#VideoInputSignal</key>
 			<string>0xA1</string>
-			<key>#Custom</key>
-			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
-			<key>#Inject</key>
-			<true/>
 			<key>#VendorID</key>
 			<string>0x1006</string>
+			<key>#Inject</key>
+			<true/>
+			<key>#Custom</key>
+			<data>AP///////wAGECGSAAAAAAASAQOAIRV4CunVmVlTjigmUFQAAAABAQEBAQEBAQEBAQEBAQEB3iGgcFCEHzAgIFYAS88QAAAY3iGgcFCEHzAgIFYAS88QAAAAAAAA/gBXNjU3RwAxNTRXUDEKAAAA/gAjMz1IZYSq/wIBCiAgAJo=</data>
 		</dict>
 		<key>#LoadVBios</key>
 		<false/>
@@ -1001,7 +1001,7 @@
 		<key>DiscardHibernateMap</key>
 		<false/>
 		<key>DevirtualiseMmio</key>
-		<false/>
+		<true/>
 		<key>KernelCache</key>
 		<string>Auto</string>
 		<key>EnableSafeModeSlide</key>
@@ -1033,7 +1033,7 @@
 		<key>ProvideMaxSlide</key>
 		<integer>0</integer>
 		<key>EnableWriteUnprotector</key>
-		<true/>
+		<false/>
 		<key>ThirdPartyDrives</key>
 		<false/>
 		<key>SetupVirtualMap</key>
